@@ -8,6 +8,7 @@ const freq = require('./routes/freqmanual')
 const receita = require('./routes/receita');
 const receitaid = require('./routes/receitaid');
 const forno = require('./routes/forno');
+const posicao = require('./routes/posicao')
 const cors = require('cors');
 
 const errorController = require('./controllers/error');
@@ -39,6 +40,8 @@ app.use('/receita', receita);
 app.use('/receitaid', receitaid);
 
 app.use('/forno',forno);
+
+app.use('/posicao', posicao)
 
 app.use(errorController.get404);
 
